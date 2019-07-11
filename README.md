@@ -2,8 +2,8 @@
 
 |题目编号|题目名称|链接|解题时间|
 |:---:|:---:|:---:|:---:|
-|4|[寻找两个有序数组的中位数](#Median-of-Two-Sorted-Arrays)||https://leetcode-cn.com/problems/median-of-two-sorted-arrays/|2019-07-11| 
-|52|[N皇后 II](N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019--7-12|
+|4|[寻找两个有序数组的中位数](#Median-of-Two-Sorted-Arrays)|https://leetcode-cn.com/problems/median-of-two-sorted-arrays/|2019-07-11| 
+|52|[N皇后 II](#N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019--7-12|
 
            
 ## 解题思路                                                                   
