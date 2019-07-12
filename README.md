@@ -3,7 +3,8 @@
 |题目编号|题目名称|链接|解题时间|
 |:---:|:---:|:---:|:---:|
 |4|[寻找两个有序数组的中位数](#Median-of-Two-Sorted-Arrays)|https://leetcode-cn.com/problems/median-of-two-sorted-arrays/|2019-07-11| 
-|52|[N皇后 II](#N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019--7-12|
+|52|[N皇后 II](#N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019-07-12|
+|980|[不同路径 III](#Unique-Paths-III)|https://leetcode-cn.com/problems/unique-paths-iii/|2019-07-12|
 
            
 ## 解题思路                                                                   
@@ -22,4 +23,8 @@ Tips:较好的时间复杂度可以在放置数组元素时进行判断，
 使用递归，递归体中使用一个循环将皇后放置在对应的位置，判断当前位置是否符合要求，若符合要求则调用递归放置下一个皇后，若不符合要求则continue进入
 下一次循环。当递归调用至所有皇后均被放置后将解决方案的次数自增。
    
-   
+### Unique Paths III
+使用深度优先搜索进行网格的遍历，当遍历至终点时判断是不是所有网格都已经被访问过，如果是则将路径数加一。  
+具体实现方法是使用递归进行遍历操作，每访访问一个网格时先判断该网格是否可以到达，访问可到达的网格后将记录访问数量的变量加一，
+并递归调用访问该网格上下左右的网格，直到访问到终点。
+
