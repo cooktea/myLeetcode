@@ -5,6 +5,7 @@
 |4|[寻找两个有序数组的中位数](#Median-of-Two-Sorted-Arrays)|https://leetcode-cn.com/problems/median-of-two-sorted-arrays/|2019-07-11| 
 |52|[N皇后 II](#N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019-07-12|
 |980|[不同路径 III](#Unique-Paths-III)|https://leetcode-cn.com/problems/unique-paths-iii/|2019-07-12|
+|145|[二叉树的后序遍历](#Binary-Tree-Postorder-Traversal)|https://leetcode-cn.com/problems/binary-tree-postorder-traversal/|2019-07-13|
 
            
 ## 解题思路                                                                   
@@ -27,4 +28,16 @@ Tips:较好的时间复杂度可以在放置数组元素时进行判断，
 使用深度优先搜索进行网格的遍历，当遍历至终点时判断是不是所有网格都已经被访问过，如果是则将路径数加一。  
 具体实现方法是使用递归进行遍历操作，每访访问一个网格时先判断该网格是否可以到达，访问可到达的网格后将记录访问数量的变量加一，
 并递归调用访问该网格上下左右的网格，直到访问到终点。
+
+### Binary Tree Postorder Traversal
+- 递归  
+略
+- 迭代
+维护一个栈和一个节点对象，节点对象初始化为二叉树的根。同时维护一个链表用来保存后序遍历的序列。
+当节点对象不为null且栈也不为空时，将该节点入栈，并将节点的值插入链表头。再将节点置为该节点的右子节点。若新节点为空，则将栈顶节点出栈，并赋值给新节点。
+
+
+
+
+
 

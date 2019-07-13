@@ -1,3 +1,4 @@
-class Test{
+import java.io.*;
 
+class Test {
 }
