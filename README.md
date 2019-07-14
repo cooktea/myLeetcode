@@ -6,6 +6,7 @@
 |52|[N皇后 II](#N-Queens-II)|https://leetcode-cn.com/problems/n-queens-ii/|2019-07-12|
 |980|[不同路径 III](#Unique-Paths-III)|https://leetcode-cn.com/problems/unique-paths-iii/|2019-07-12|
 |145|[二叉树的后序遍历](#Binary-Tree-Postorder-Traversal)|https://leetcode-cn.com/problems/binary-tree-postorder-traversal/|2019-07-13|
+|51|[N皇后](#N-Queens)|https://leetcode-cn.com/problems/n-queens/|2019-07-14|
 
            
 ## 解题思路                                                                   
@@ -36,7 +37,8 @@ Tips:较好的时间复杂度可以在放置数组元素时进行判断，
 维护一个栈和一个节点对象，节点对象初始化为二叉树的根。同时维护一个链表用来保存后序遍历的序列。
 当节点对象不为null且栈也不为空时，将该节点入栈，并将节点的值插入链表头。再将节点置为该节点的右子节点。若新节点为空，则将栈顶节点出栈，并赋值给新节点。
 
-
+### N-Queens  
+解题思路和[#52](#N-Queens-II)基本相同。不同处在于当每个皇后都被放置后输出当前棋盘的状态。
 
 
 

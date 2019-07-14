@@ -44,6 +44,10 @@ public class Solution_52 {
          */
         if(j == max){
             sum++;
+            for (int t = 0;t<place.length;t++){
+                System.out.print(place[t] + " ");
+            }
+            System.out.println(" ");
             return;
         }
         /*
