@@ -7,8 +7,11 @@
 |980|[不同路径 III](#Unique-Paths-III)|https://leetcode-cn.com/problems/unique-paths-iii/|2019-07-12|
 |145|[二叉树的后序遍历](#Binary-Tree-Postorder-Traversal)|https://leetcode-cn.com/problems/binary-tree-postorder-traversal/|2019-07-13|
 |51|[N皇后](#N-Queens)|https://leetcode-cn.com/problems/n-queens/|2019-07-14|
-|1028|[从先序遍历还原二叉树](Recover-a-Tree-From-Preorder-Traversal)|https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/|2019-07-16|
-           
+|1028|[从先序遍历还原二叉树](#Recover-a-Tree-From-Preorder-Traversal)|https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/|2019-07-16|
+|773|[滑动谜题](#Sliding-Puzzle)|https://leetcode-cn.com/problems/sliding-puzzle/|2019-07-16|
+
+
+ 
 ## 解题思路                                                                   
 ### Median of Two Sorted Arrays
 首先判断是否有一个数组为空，如有空数组则返回另一个数组的中位数  
@@ -40,13 +43,15 @@ Tips:较好的时间复杂度可以在放置数组元素时进行判断，
 ### N-Queens  
 解题思路和[#52](#N-Queens-II)基本相同。不同处在于当每个皇后都被放置后输出当前棋盘的状态。
 
-### Recover a Tree From Preorder Traversal  
+### Recover a Tree From Preorder Traversal
 首先分割字符串，将字符串按节点分割成子字符串序列，依次从子字符串序列中取出字串并根据字串生成节点和节点的层数，用一个map保存`(用map保存对于性能不够友好)`
 生成map后将其添加进节点序列。  
 节点序列全部生成后，遍历该节点序列，若节点的层数不为0，即不是根节点，则从该节点往前遍历，当遍历至比该节点的层数少一层的节点时，即遍历到了父节点。
 将该节点和父节点相连即可。
 
-
-
+### Sliding Puzzle   
+使用广度优先遍历，获得所有的移动可能性，直到得到需要的布局或所有可能性都不符合要求。  
+在DFS时，维护一个队列用来保存board的状态。维护一个SET用来保存已经生成过的board状态。每次从队列中取出一个board进行判断，并判断该状态有没有生成过。
+如果没有生成过，则判断该状态是否符合要求，如果不符合要求，则基于改状态生成“0”上下左右移动后的状态并添加至队列中，循环至队列为空，返回-1。
 
 
