@@ -10,9 +10,17 @@
 |1028|[从先序遍历还原二叉树](#Recover-a-Tree-From-Preorder-Traversal)|https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/|2019-07-16|
 |773|[滑动谜题](#Sliding-Puzzle)|https://leetcode-cn.com/problems/sliding-puzzle/|2019-07-16|
 |99|[恢复二叉搜索树](#Recover-Binary-Search-Tree)|https://leetcode-cn.com/problems/recover-binary-search-tree/|2019-07-18|
-
+|312|[戳气球](#Burst-Balloons)|https://leetcode-cn.com/problems/burst-balloons/|2019-07-20|
 
 ## 解题思路    
+### BurstBalloons  
+[查看代码](src/Solution_312.java)  
+动态规划的思想  
+维护一个二维数组dp，其中dp[i][j]表示从第i个到第j个气球能获得的最大硬币数。第i个和第j个不能戳。     
+状态转移方程：  
+(k表示范围内最后一个被戳的气球)  
+`dp[i][j] = max(dp[i][j],dp[i][k]+dp[k][j]+nums[i]*nums[j]*nums[k])`
+
 ### Recover Binary Search Tree  
 [查看代码](src/Solution_99.java)  
 由于整个二叉搜索树只有两个节点位置错误，则只需要找到这两个节点并交换即可  
