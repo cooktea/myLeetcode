@@ -11,8 +11,15 @@
 |773|[滑动谜题](#Sliding-Puzzle)|https://leetcode-cn.com/problems/sliding-puzzle/|2019-07-16|
 |99|[恢复二叉搜索树](#Recover-Binary-Search-Tree)|https://leetcode-cn.com/problems/recover-binary-search-tree/|2019-07-18|
 |312|[戳气球](#Burst-Balloons)|https://leetcode-cn.com/problems/burst-balloons/|2019-07-20|
+|25|[K 个一组翻转链表](#Reverse-Nodes-in-k-Group)|https://leetcode-cn.com/problems/reverse-nodes-in-k-group/submissions/|2019-07-20|
+
 
 ## 解题思路    
+### Reverse Nodes in k-Group
+[查看代码](src/Solution_25.java)     
+按组进行反转，每反转一组返回该组的链首和链尾。使用递归，将各组相连，需要注意的时最后剩余的部分不需要反转，且只需要返回链首
+
+
 ### BurstBalloons  
 [查看代码](src/Solution_312.java)  
 动态规划的思想  
