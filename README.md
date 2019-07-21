@@ -12,15 +12,20 @@
 |99|[恢复二叉搜索树](#Recover-Binary-Search-Tree)|https://leetcode-cn.com/problems/recover-binary-search-tree/|2019-07-18|
 |312|[戳气球](#Burst-Balloons)|https://leetcode-cn.com/problems/burst-balloons/|2019-07-20|
 |25|[K 个一组翻转链表](#Reverse-Nodes-in-k-Group)|https://leetcode-cn.com/problems/reverse-nodes-in-k-group/submissions/|2019-07-20|
-
+|72|[编辑距离](#Edit-Distance)|https://leetcode-cn.com/problems/edit-distance/|2019-07-21|
 
 ## 解题思路    
+### Edit Distance   
+[查看代码](src/Solution_72.java)     
+> 参考资料:https://blog.csdn.net/chichoxian/article/details/53944188    
+
+使用动态规划的思想，维护一个二维数组保存不同操作下到达每一个步骤需要的最少步骤，详见参考资料
+
 ### Reverse Nodes in k-Group
 [查看代码](src/Solution_25.java)     
 按组进行反转，每反转一组返回该组的链首和链尾。使用递归，将各组相连，需要注意的时最后剩余的部分不需要反转，且只需要返回链首
 
-
-### BurstBalloons  
+### Burst Balloons  
 [查看代码](src/Solution_312.java)  
 动态规划的思想  
 维护一个二维数组dp，其中dp[i][j]表示从第i个到第j个气球能获得的最大硬币数。第i个和第j个不能戳。     
