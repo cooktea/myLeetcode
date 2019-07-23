@@ -13,8 +13,23 @@
 |312|[戳气球](#Burst-Balloons)|https://leetcode-cn.com/problems/burst-balloons/|2019-07-20|
 |25|[K 个一组翻转链表](#Reverse-Nodes-in-k-Group)|https://leetcode-cn.com/problems/reverse-nodes-in-k-group/submissions/|2019-07-20|
 |72|[编辑距离](#Edit-Distance)|https://leetcode-cn.com/problems/edit-distance/|2019-07-21|
+|765|[情侣牵手](#Couples-Holding-Hands)|https://leetcode-cn.com/problems/couples-holding-hands/|2019-07-22|
+|749|[隔离病毒](#Contain-Virus)|https://leetcode-cn.com/problems/contain-virus/|2019-07-23|
+
 
 ## 解题思路    
+### Contain Virus   
+[查看代码](src/Solution_749.java)       
+循环使用DFS的思想获取所有的病毒区域，并用list进行存储，每块区域也使用list存储病毒的位置，直到病毒区域为0   
+在所有病毒区域中寻找威胁最大，即下一次感染最多的一块区域，将该区域的使用防火墙包围，获取防火墙的数量并添加至总数中
+即将该区域的病毒感染能力清楚，将该区域的值置为2.并将该区域从病毒区域list中删除。
+遍历病毒区域集合，进行病毒感染操作，即将病毒周围的0置为1。   
+查看还有没有可以感染的区域，如果没有则跳出循环，返回防火墙总数。否则执行下一轮循环。   
+
+### Couples Holding Hands
+[查看代码](src/Solution_765.java)       
+待完成
+
 ### Edit Distance   
 [查看代码](src/Solution_72.java)     
 > 参考资料:https://blog.csdn.net/chichoxian/article/details/53944188    
