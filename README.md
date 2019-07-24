@@ -15,14 +15,23 @@
 |72|[编辑距离](#Edit-Distance)|https://leetcode-cn.com/problems/edit-distance/|2019-07-21|
 |765|[情侣牵手](#Couples-Holding-Hands)|https://leetcode-cn.com/problems/couples-holding-hands/|2019-07-22|
 |749|[隔离病毒](#Contain-Virus)|https://leetcode-cn.com/problems/contain-virus/|2019-07-23|
+|1106|[解析布尔表达式](#Parsing-A-Boolean-Expression)|https://leetcode-cn.com/problems/parsing-a-boolean-expression/|2019-07-24|
 
 
 ## 解题思路    
+### Parsing A Boolean Expression
+[查看代码](src/Solution_1106.java)       
+布尔表达式的结构是一个代表布尔操作的字母在前，后跟一个或数个子布尔表达式。   
+主要的解题思想是首先获得布尔操作，然后获得这个布尔操作的布尔量集合。依次对子布尔表达式进行操作。    
+如果是与操作，则遍历其子布尔表达式，如果有一个为假则返回假。  
+如果是或操作，则遍历其子布尔表达式，如果有一个为真则返回真。   
+如果是非操作，则遍历其子布尔表达式，返回其子布尔表达式的逻辑非值。
+
 ### Contain Virus   
 [查看代码](src/Solution_749.java)       
 循环使用DFS的思想获取所有的病毒区域，并用list进行存储，每块区域也使用list存储病毒的位置，直到病毒区域为0   
-在所有病毒区域中寻找威胁最大，即下一次感染最多的一块区域，将该区域的使用防火墙包围，获取防火墙的数量并添加至总数中
-即将该区域的病毒感染能力清楚，将该区域的值置为2.并将该区域从病毒区域list中删除。
+在所有病毒区域中寻找威胁最大，即下一次感染最多的一块区域，将该区域的使用防火墙包围，获取防火墙的数量并添加至总数中,
+即将该区域的病毒感染能力清除，将该区域的值置为2.并将该区域从病毒区域list中删除。
 遍历病毒区域集合，进行病毒感染操作，即将病毒周围的0置为1。   
 查看还有没有可以感染的区域，如果没有则跳出循环，返回防火墙总数。否则执行下一轮循环。   
 
