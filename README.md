@@ -16,9 +16,16 @@
 |765|[情侣牵手](#Couples-Holding-Hands)|https://leetcode-cn.com/problems/couples-holding-hands/|2019-07-22|
 |749|[隔离病毒](#Contain-Virus)|https://leetcode-cn.com/problems/contain-virus/|2019-07-23|
 |1106|[解析布尔表达式](#Parsing-A-Boolean-Expression)|https://leetcode-cn.com/problems/parsing-a-boolean-expression/|2019-07-24|
+|164|[最大间距](#Maximum-Gap)|https://leetcode-cn.com/problems/maximum-gap/|2019-07-25|
 
 
 ## 解题思路    
+### Maximum Gap  
+[查看代码](src/Solution_164.java)       
+由于时间复杂度要求为O(n)，所以使用桶排序对数组进行排序。    
+假设数组里最大值和最小值分别为max和min，数组长度为size。则最大间距一定大于等于Math.ceil((max-min)/(size-1))，
+所以将桶的大小设为Math.ceil((max-min)/(size-1))，则前一个桶的最小值和后一个桶的最大值一定大于桶内的差值。  
+
 ### Parsing A Boolean Expression
 [查看代码](src/Solution_1106.java)       
 布尔表达式的结构是一个代表布尔操作的字母在前，后跟一个或数个子布尔表达式。   
