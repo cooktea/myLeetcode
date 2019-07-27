@@ -17,9 +17,14 @@
 |749|[隔离病毒](#Contain-Virus)|https://leetcode-cn.com/problems/contain-virus/|2019-07-23|
 |1106|[解析布尔表达式](#Parsing-A-Boolean-Expression)|https://leetcode-cn.com/problems/parsing-a-boolean-expression/|2019-07-24|
 |164|[最大间距](#Maximum-Gap)|https://leetcode-cn.com/problems/maximum-gap/|2019-07-25|
-
+|458|[可怜的小猪](#Poor-Pigs)|https://leetcode-cn.com/problems/poor-pigs/|2019-07-27|
 
 ## 解题思路    
+### Poor Pigs
+[查看代码](src/Solution_458.java)         
+首先算出规定时间内可以喝几次水，假设可以喝n次水，则一只猪可以再规定时间内区分n+1桶水，则两只猪可以区分(n+1)^2桶水    
+由此可得，x只猪可以区分(n+1)^x桶水。
+
 ### Maximum Gap  
 [查看代码](src/Solution_164.java)       
 由于时间复杂度要求为O(n)，所以使用桶排序对数组进行排序。    
