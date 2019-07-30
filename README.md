@@ -18,8 +18,20 @@
 |1106|[解析布尔表达式](#Parsing-A-Boolean-Expression)|https://leetcode-cn.com/problems/parsing-a-boolean-expression/|2019-07-24|
 |164|[最大间距](#Maximum-Gap)|https://leetcode-cn.com/problems/maximum-gap/|2019-07-25|
 |458|[可怜的小猪](#Poor-Pigs)|https://leetcode-cn.com/problems/poor-pigs/|2019-07-27|
+|732|[我的日程安排表 III](#My-Calendar-III)|https://leetcode-cn.com/problems/my-calendar-iii/|2019-07-30|
+
 
 ## 解题思路    
+### My Calendar III
+[查看代码](src/MyCalendarThree.java)    
+> 参考资料:https://leetcode-cn.com/problems/my-calendar-iii/comments/   
+
+将一次预定看作一条从start开始，end结束的射线。每次预定时要返回的就是在某时刻内经过的射线最多时，射线的数量。   
+即最小的start开始，到最大的end结束，没经过一个start则+1，经过一个end则-1。记录过程中的最大值。     
+具体的算法是维护了一个TreeMap，由于其自动排序的特点，统计最大值时较为方便。每次执行book操作时，首先看Map里是否有
+key为start和end的节点，如果有则start节点的值+1.end节点的值-1.如果没有，则新建值为1的start节点和值为-1的end节点。
+完成后按照key从小到大的顺序遍历map，获得最大值。
+
 ### Poor Pigs
 [查看代码](src/Solution_458.java)         
 首先算出规定时间内可以喝几次水，假设可以喝n次水，则一只猪可以再规定时间内区分n+1桶水，则两只猪可以区分(n+1)^2桶水    
