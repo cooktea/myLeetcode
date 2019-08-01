@@ -19,9 +19,15 @@
 |164|[最大间距](#Maximum-Gap)|https://leetcode-cn.com/problems/maximum-gap/|2019-07-25|
 |458|[可怜的小猪](#Poor-Pigs)|https://leetcode-cn.com/problems/poor-pigs/|2019-07-27|
 |732|[我的日程安排表 III](#My-Calendar-III)|https://leetcode-cn.com/problems/my-calendar-iii/|2019-07-30|
-
+|352|[将数据流变为多个不相交区间](#Data-Stream-as-Disjoint-Intervals)|https://leetcode-cn.com/problems/data-stream-as-disjoint-intervals/|2019-08-01|
 
 ## 解题思路    
+### Data Stream as Disjoint Intervals
+[查看代码](src/Solution_352.java)       
+维护一个map用来存储区间，其中key为区间开始，value为区间结束。  
+当插入一个值时，就是判断这个值在区间的位置。根据不同的位置进行不同的操作。   
+返回区间数组时就是遍历这个map，将key和value取出放入数组中。
+
 ### My Calendar III
 [查看代码](src/MyCalendarThree.java)    
 > 参考资料:https://leetcode-cn.com/problems/my-calendar-iii/comments/   
