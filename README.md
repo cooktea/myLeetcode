@@ -20,8 +20,17 @@
 |458|[可怜的小猪](#Poor-Pigs)|https://leetcode-cn.com/problems/poor-pigs/|2019-07-27|
 |732|[我的日程安排表 III](#My-Calendar-III)|https://leetcode-cn.com/problems/my-calendar-iii/|2019-07-30|
 |352|[将数据流变为多个不相交区间](#Data-Stream-as-Disjoint-Intervals)|https://leetcode-cn.com/problems/data-stream-as-disjoint-intervals/|2019-08-01|
+|810|[黑板异或游戏](#Chalkboard-XOR-Game)|https://leetcode-cn.com/problems/chalkboard-xor-game/|2019-08-02|
+
 
 ## 解题思路    
+### Chalkboard XOR Game
+[查看代码](src/Solution_810.java)       
+由于小红先手，所以当刚开始时如果数组所有元素异或值为0，则小红胜。  
+由于假设每步都选择最优解，则不论当前数组是什么情况，都会选择下一步不会造成异或值为0的情况。
+如果数组中有偶数个数字，那么最后一个数字一定是小明移除，小红胜。如果有奇数个数字，则最后一个是小红移除，小明胜。
+
+
 ### Data Stream as Disjoint Intervals
 [查看代码](src/Solution_352.java)       
 维护一个map用来存储区间，其中key为区间开始，value为区间结束。  
